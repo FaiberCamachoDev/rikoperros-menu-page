@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --color-brand-orange: #E8450A;
+  --color-brand-light: #F97316;
+  --color-brand-dark: #1C1C1C;
+  --color-brand-bg: #F5F0EB;
+}
