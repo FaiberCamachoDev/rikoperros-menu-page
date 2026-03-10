@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  
   --font-display: "Oswald", sans-serif;
   --font-body: "Open Sans", sans-serif;
 
@@ -17,7 +18,7 @@
 .nav-link {
   color: #444;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
   position: relative;
   transition: color 0.2s;
