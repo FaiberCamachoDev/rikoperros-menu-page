@@ -9,3 +9,54 @@
   --color-brand-dark: #1C1C1C;
   --color-brand-bg: #F5F0EB;
 }
+/* ── NAVBAR ── */
+#navbar.scrolled {
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.10);
+}
+
+.nav-link {
+  color: #444;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E8450A;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #E8450A;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── BOTÓN NARANJA ── */
+.btn-orange {
+  background: linear-gradient(135deg, #F97316, #E8450A);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-orange:hover  { opacity: 0.88; }
+.btn-orange:active { transform: scale(0.97); }

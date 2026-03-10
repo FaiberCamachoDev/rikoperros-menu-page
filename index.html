@@ -19,7 +19,61 @@
   <body class="bg-white text-gray-900 font-body">
 
     <!-- NAVBAR -->
-    <header id="navbar">
+    <header id="navbar" class="fixed top-0 left-0 z-50 bg-white transition-shadow duration-300 w-full">
+      <div class="px-5 py-3 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#inicio" class="flex shrink-0">
+          <span class="font-display font-bold text-xl uppercase tracking-wide">
+            <span class="text-brand-dark">RIKO PERROS </span>
+            <span class="text-brand-orange">EXPRESS</span>
+          </span>
+        </a>
+
+        <!-- Links desktop -->
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="#inicio"    class="nav-link">Inicio</a>
+          <a href="#menu"      class="nav-link">Menú</a>
+          <a href="#nosotros"  class="nav-link">Nosotros</a>
+          <a href="#ubicacion" class="nav-link">Ubicación</a>
+          <a href="#contacto"  class="nav-link">Contacto</a>
+        </nav>
+
+        <!-- Botón CTA + hamburger -->
+        <div class="flex items-center gap-1">
+          <button
+            onclick="abrirWhatsApp()"
+            class="hidden sm:flex btn-orange text-xs p-1.5">
+            Pedir ahora
+          </button>
+          <button
+            id="btn-hamburger"
+            class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+            aria-label="Abrir menú">
+            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-300 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-5 py-3 flex flex-col gap-1">
+          <a href="#inicio"    onclick="cerrarMenuMovil()" class="nav-link py-2.5 border-b border-gray-50">Inicio</a>
+          <a href="#menu"      onclick="cerrarMenuMovil()" class="nav-link py-2.5 border-b border-gray-50">Menú</a>
+          <a href="#nosotros"  onclick="cerrarMenuMovil()" class="nav-link py-2.5 border-b border-gray-50">Nosotros</a>
+          <a href="#ubicacion" onclick="cerrarMenuMovil()" class="nav-link py-2.5 border-b border-gray-50">Ubicación</a>
+          <a href="#contacto"  onclick="cerrarMenuMovil()" class="nav-link py-2.5">Contacto</a>
+          <button onclick="abrirWhatsApp(); cerrarMenuMovil();" class="btn-orange mt-3 py-3 text-sm w-full">
+            Pedir ahora
+          </button>
+        </div>
+      </div>
     </header>
 
     <!-- HERO -->
